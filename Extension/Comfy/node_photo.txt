@@ -1,0 +1,37 @@
+git clone https://github.com/spacepxl/ComfyUI-Image-Filters
+pip install -q -r ComfyUI-Image-Filters/requirements.txt
+git clone https://github.com/Nourepide/ComfyUI-Allor
+bash content/ComfyUI/custom_nodes/ComfyUI-Allor/install.sh
+git clone https://github.com/EllangoK/ComfyUI-post-processing-nodes
+git clone https://github.com/11dogzi/Comfyui-ergouzi-Nodes
+pip install -q -r Comfyui-ergouzi-Nodes/requirements.txt
+
+git clone https://github.com/kijai/ComfyUI-SUPIR
+pip install -q -r ComfyUI-SUPIR/requirements.txt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0F_fp16.safetensors -d /content/ComfyUI/models/checkpoints -o SUPIR-v0F_fp16.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0Q_fp16.safetensors -d /content/ComfyUI/models/checkpoints -o SUPIR-v0Q_fp16.safetensors
+
+git clone https://github.com/nullquant/ComfyUI-BrushNet
+pip install -q -r ComfyUI-BrushNet/requirements.txt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/brushnet/brushnet_random_mask.safetensors -d /content/ComfyUI/models/inpaint/brushnet -o brushnet_random_mask.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/brushnet/brushnet_segmentation_mask.safetensors -d /content/ComfyUI/models/inpaint/brushnet -o brushnet_segmentation_mask.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/brushnetxl/brushnet_random_mask_sdxl_v1.safetensors -d /content/ComfyUI/models/inpaint/brushnetxl -o brushnet_random_mask_sdxl_v1.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/brushnetxl/brushnet_segmentation_mask_sdxl.safetensors -d /content/ComfyUI/models/inpaint/brushnetxl -o brushnet_segmentation_mask_sdxl.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/powerpaint/powerpaint_brushnet_text_encoder.safetensors -d /content/ComfyUI/models/inpaint/powerpaint -o powerpaint_brushnet_text_encoder.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/StableDiffusionVN/brushnet/resolve/main/powerpaint/powerpaint_v2_brushnet.safetensors -d /content/ComfyUI/models/inpaint/powerpaint -o powerpaint_v2_brushnet.safetensors
+
+git clone https://github.com/huchenlei/ComfyUI-layerdiffusion
+pip install -q -r ComfyUI-layerdiffusion/requirements.txt
+
+git clone https://github.com/Gourieff/comfyui-reactor-node
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/inswapper_128.onnx -d /content/ComfyUI/models/insightface -o inswapper_128.onnx
+pip install -r /content/ComfyUI/custom_nodes/comfyui-reactor-node/requirements.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth -d /content/ComfyUI/models/facerestore_models -o codeformer.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth -d /content/ComfyUI/models/facerestore_models -o GFPGANv1.4.pth
+
+git clone https://github.com/kijai/ComfyUI-IC-Light
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/huchenlei/IC-Light-ldm/resolve/main/iclight_sd15_fbc_unet_ldm.safetensors -d /content/ComfyUI/models/unet -o iclight_sd15_fbc_unet_ldm.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/huchenlei/IC-Light-ldm/resolve/main/iclight_sd15_fc_unet_ldm.safetensors -d /content/ComfyUI/models/unet -o iclight_sd15_fc_unet_ldm.safetensors
+git clone https://github.com/huchenlei/ComfyUI-IC-Light-Native
+git clone https://github.com/kijai/ComfyUI-KJNodes
+pip install -q -r /content/ComfyUI/custom_nodes/ComfyUI-KJNodes/requirements.txt

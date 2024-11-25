@@ -1,0 +1,2 @@
+https://github.com/EeroHeikkinen/ComfyUI-eesahesNodes
+https://github.com/comfyanonymous/ComfyUI_bitsandbytes_NF4
